@@ -8,10 +8,28 @@ html,body{
     width: 100%;
     height: 100%;
 }
+#circle{
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    z-index: 99999;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+}
+.bounding .boundingelem {
+    transform: translateY(100px);
+}
+
 #main{
     width: 100%;
 }
 #view{
+    position: relative;
     color: #fff;
     width: 100%;
     height: 100vh;
@@ -46,6 +64,9 @@ html,body{
     margin-left: 100px;
 }
 .blocktext{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     width: fit-content;
 }
 .blocktext h5{
@@ -54,6 +75,9 @@ html,body{
     text-align: right;
 }
 #headlinks{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
     margin-top: 100px;
     padding-right: 50px;
 }
@@ -118,13 +142,14 @@ html,body{
 }
 .elem img{
     height: 140%;
-    display: none;
+    display: none;/*img disabled*/
     z-index: 999;
     position: absolute;
 
 }
 #about{
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     gap :20px;
@@ -188,6 +213,10 @@ html,body{
 #footerleft{
     display: flex;
     gap: 20px;
+}
+#footerright{
+    display: flex;
+    gap: 30px;
 }
 #footer a{
     text-transform: uppercase;
