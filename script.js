@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
     smooth: true
@@ -83,3 +84,43 @@ firstPageAnim();
 //         });
 //     });
 // });
+=======
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+function firstPageAnim(){
+    var tl = gsap.timeline();
+
+    tl.from("#nav", {
+        y: '-10',
+        opacity: 0,
+        duration: 1.5,
+        ease: Expo.easeInOut
+    })
+    .to(".boundingelem", {
+        y: 0,
+        ease: Expo.easeInOut,
+        duration: 2,
+        delay: -1,
+        stagger: .2
+    })
+    .from("#viewfooter", {
+        y: -10,
+        opacity: 0,
+        duration: 1.5,
+        delay: -1,
+        ease: Expo.easeInOut,
+    })
+}
+
+function circleMouseFollower(){
+    window.addEventListener("mousemove", function(dets){
+        document.querySelector("#circle").style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
+    })
+}
+
+circleMouseFollower();
+firstPageAnim();
+>>>>>>> d28617923ee1099b188ba55969cdbfd65f3aa29b
