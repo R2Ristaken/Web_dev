@@ -130,6 +130,7 @@ html,body{
     justify-content: space-between;
     width: 100%;
     padding: 3.5vw 3vw;
+    padding-right: 0;
     border-top: 1px solid #888;
 }
 .elem h1{
@@ -142,7 +143,7 @@ html,body{
 }
 .elem img{
     height: 140%;
-    display: none;/*img disabled*/
+    display: none;
     z-index: 999;
     position: absolute;
 
@@ -174,8 +175,8 @@ html,body{
     margin-bottom: 30px;
 }
 #about img{
-    width: 200px;
-    
+    width: 100px;
+    border-radius: 50%;
 }
 #textabout a{
     padding: 12px 22px;
